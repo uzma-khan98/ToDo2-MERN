@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import dotenv from 'dotenv'
 import cors from "cors";
 import { connectToDB } from "./db.js";
 import Todo from "./todo.model.js";
@@ -53,7 +54,7 @@ app.post("/todo", async (req, res) => {
     todo
   });
 });
-// ! to get/read todos
+// ! to get/read all todos
 app.get("/todos", async (req, res) => {
   const todos = await Todo.find();
   res.status(200).json({
