@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import cors from "cors";
 import { connectToDB } from "./db.js";
 import Todo from "./todo.model.js";
-import { CreateSchema, IDSchema } from "./Types.js";
+import { CreateSchema, IDSchema } from "./types.js";
 
 const app = express();
 
